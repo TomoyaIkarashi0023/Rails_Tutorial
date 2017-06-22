@@ -1,21 +1,32 @@
 require 'test_helper'
 
 class StaticPagesControllerTest < ActionController::TestCase
-  test "should get home" do
+
+  def setup
+    @base_title = 'Ruby on Rails Tutorial Sample App'
+  end
+
+  test "should get root" do
     get :home
     assert_response :success
-    assert_select "title", "Home|Ruby on Rails Tutoriral Sample App"
+    assert_select "title", "Ruby on Rails Tutorial Sample App"
   end
 
   test "should get help" do
     get :help
     assert_response :success
-    assert_select "title", "Help|Ruby on Rails Tutorial Sample App"
+    assert_select "title", "Help|#{@base_title}"
   end
 
   test "should get about" do
     get :about
     assert_response :success
-    assert_select "title", "About|Ruby on Rails Tutrial Sample App"
+    assert_select "title", "About|#{@base_title}"
+  end
+
+  test "should get content" do
+    get :content
+    assert_response :success
+    assert_select "title", "Content|#{@base_title}"
   end
 end
