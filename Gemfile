@@ -27,6 +27,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'rb-readline'
 
+gem 'pry-rails'
+gem 'pry-doc'
+gem 'pry-byebug'
+gem 'pry-stack_explorer'
+
 group :development do
   # gem 'web-console',           '3.1.1'
   # gem 'listen',                '3.0.8'
