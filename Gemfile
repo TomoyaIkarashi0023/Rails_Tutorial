@@ -27,6 +27,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'rb-readline'
 
+gem 'bcrypt'
+
 gem 'pry-rails'
 gem 'pry-doc'
 gem 'pry-byebug'
