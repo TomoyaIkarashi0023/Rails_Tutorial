@@ -23,10 +23,4 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_response :success
     assert_select "title", "About|#{@base_title}"
   end
-
-  test "should get content" do
-    get :content
-    assert_response :success
-    assert_select "title", "Content|#{@base_title}"
-  end
 end

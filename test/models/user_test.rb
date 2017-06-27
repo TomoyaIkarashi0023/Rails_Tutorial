@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-
   def setup
     @user = User.new(name: "Example User", email:"user@example.com",
                     password: "foobar", password_confirmation: "foobar")
@@ -22,9 +21,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "email validation shoud accept vaild address" do
-    vaild_address = %w[USER@foo.COM A_US-ER@foo.bar.org
-                    first.last@foo.jp alice+bob@baz.cn]
-    vaild_address.each do |vaild_address|
+    invaild_addresses = %w[ user@example,com user_at_foo.org user.name@example.foo@bar_baz@bar_baz.com
+                            foo@bar+baz.com ]
+    invaild_addresses.each do |vaild_address|
       @user.email = vaild_address
       assert_not @user.valid?, "#{vaild_address.inspect} should be vaild"
     end
