@@ -34,6 +34,9 @@ gem 'pry-doc'
 gem 'pry-byebug'
 gem 'pry-stack_explorer'
 
+# HTMLをslim記法で記述出来る用のgem
+gem 'slim-rails'
+
 group :development do
   # gem 'web-console',           '3.1.1'
   # gem 'listen',                '3.0.8'
