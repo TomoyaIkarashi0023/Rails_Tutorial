@@ -13,4 +13,8 @@ class User < ActiveRecord::Base
                                                   BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
   end
+
+  def feed
+    Micropost.where("user_id=?",id)
+  end
 end
